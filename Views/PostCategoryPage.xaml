@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDocuments.Views.PostCategoryPage"
+             BackgroundColor="#D9D9D9"
+             Title="PostCategoryPage">
+
+    <Grid RowDefinitions="50,*" RowSpacing="10">
+        <Grid Grid.Row="0" ColumnDefinitions="*,*" Margin="200,10,200,10">
+            <Label Grid.Row="0" 
+                   Text="Adicionar nova categoria"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"
+                   FontAttributes="Bold"/>
+            <Button Grid.Column="1" 
+                HorizontalOptions="End" 
+                Text="x"
+                TextColor="Black"
+                HeightRequest="40"
+                WidthRequest="40"
+                Clicked="BackPage"
+                CornerRadius="20"
+                BackgroundColor="GhostWhite"/>
+        </Grid>
+
+        <Grid Grid.Row="1" RowDefinitions="50,50,*"  RowSpacing="20"   Margin="200,0,200,50" BackgroundColor="Transparent">
+            <Entry Grid.Row="0"
+                   Placeholder="Titulo da categoria"
+                   x:Name="CategoryName"
+                   ClearButtonVisibility="WhileEditing"
+                   BackgroundColor="White"/>
+            <Entry Grid.Row="1"
+                   Placeholder="Adicionar assunto a nova categoria"
+                   x:Name="ComponentTitle"
+                   ClearButtonVisibility="WhileEditing"
+                   BackgroundColor="White"/>
+            <Editor Grid.Row="2"  
+                    x:Name="ComponentDescription"
+                    Placeholder="Atualizar descrição"
+                    Margin="0,0,0,50"
+                    BackgroundColor="White"
+                    Keyboard="Chat"
+                    IsSpellCheckEnabled="False"/>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDocuments.MainPage"
+             xmlns:models="clr-namespace:AppDocuments.Model"
+             xmlns:vm="clr-namespace:AppDocuments.ViewModels"
+             BackgroundColor="#D9D9D9">
+
+    <Grid ColumnDefinitions="300,*"  RowDefinitions="*" Margin="0,20,0,0">
+        <Grid RowDefinitions="70,*" RowSpacing="10" Margin="20,0,0,20" Padding="0">
+            <Border BackgroundColor="White" 
+                    StrokeShape="RoundRectangle 10" >
+                <HorizontalStackLayout HeightRequest="68" 
+                                       Spacing="10" HorizontalOptions="Center" >
+                    <Label Grid.Column="0" 
+                           HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" 
+                           Text="Menu"  FontSize="24" 
+                           FontFamily="OpenSansSemibold"/>
+                    <ImageButton Grid.Column="1" 
+                                 Source="adicionar.png" 
+                                 Clicked="PostCategory" 
+                                 HorizontalOptions="End"
+                                 Margin="0,0" 
+                                 WidthRequest="30"/>
+                </HorizontalStackLayout>
+            </Border>
+
+
+            <Border Grid.Row="1"
+                        BackgroundColor="White" 
+                        StrokeShape="RoundRectangle 10">
+                <ScrollView>
+                    <CollectionView ItemsSource="{Binding Categories}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid RowDefinitions="55,*" 
+                                      Margin="0,0,0,0" 
+                                      x:Name="ShowMenu">
+                                    <HorizontalStackLayout BackgroundColor="Transparent"  
+                                                           VerticalOptions="Center">
+                                        <Button  Grid.Column="0" 
+                                                 HorizontalOptions="Center" 
+                                                 Clicked="ShowMenuIsVisible"
+                                                 BackgroundColor="Transparent"  
+                                                 CornerRadius="40" 
+                                                 BorderWidth="0"   
+                                                 Text="▶" 
+                                                 TextColor="Black"/>
+                                        <Label Grid.Column="1" 
+                                               Text="{Binding Name}" 
+                                               VerticalTextAlignment="Center" WidthRequest="150" 
+                                               FontSize="14" FontFamily="OpenSansSemibold" 
+                                               LineBreakMode="TailTruncation"/>
+                                        <Button  Grid.Column="2" 
+                                                 Margin="30,0,0,0" 
+                                                 HorizontalOptions="Center" 
+                                                 VerticalOptions="Center" 
+                                                 Clicked="DeteteCategory"
+                                                 CornerRadius="9" 
+                                                 Text="x" 
+                                                 TextColor="Black" 
+                                                 BorderWidth="0" 
+                                                 BackgroundColor="Transparent"/>
+                                    </HorizontalStackLayout>
+
+                                    <Grid  Grid.Row="1" 
+                                           RowDefinitions="Auto,50"
+                                           RowSpacing="0"
+                                           Margin="0"
+                                           x:Name="ComponentItem" 
+                                           IsVisible="False">
+                                        <CollectionView ItemsSource="{Binding Components}"  
+                                                        VerticalOptions="Center" 
+                                                        HorizontalOptions="Start"
+                                                        Margin="16,5,22,0">
+                                            <CollectionView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Border  BackgroundColor="GhostWhite"
+                                                             Stroke="LightGray"
+                                                             StrokeShape="RoundRectangle 5" 
+                                                             StrokeThickness="1" 
+                                                             HeightRequest="37"
+                                                             WidthRequest="240">
+                                                        <Grid ColumnDefinitions="50,*,50">
+                                                            <Button Grid.Column="0" 
+                                                                    HorizontalOptions="Center" 
+                                                                    VerticalOptions="Center"
+                                                                    Clicked="UpdateComponent"
+                                                                    Text="🔁" 
+                                                                    TextColor="Black"  
+                                                                    BorderWidth="0" 
+                                                                    BackgroundColor="Transparent" />
+
+                                                            <Label Grid.Column="1"
+                                                                   VerticalTextAlignment="Center"  
+                                                                   Text="{Binding Title}" 
+                                                                   LineBreakMode="TailTruncation" 
+                                                                   FontSize="14" FontFamily="OpenSansSemibold">
+                                                                <Label.GestureRecognizers>
+                                                                    <TapGestureRecognizer Tapped="ComponentSelect"/>
+                                                                </Label.GestureRecognizers>
+                                                            </Label>
+
+                                                            <Button Grid.Column="2"
+                                                                    HorizontalOptions="End"
+                                                                    VerticalOptions="Center"
+                                                                    Clicked="DeleteComponent"
+                                                                    BackgroundColor="Transparent"
+                                                                    Text="x" 
+                                                                    TextColor="Black"
+                                                                    BorderWidth="0"
+                                                                    FontSize="10" 
+                                                                    FontFamily="OpenSansSemibold"/>
+                                                        </Grid>
+                                                    </Border>
+                                                </DataTemplate>
+                                            </CollectionView.ItemTemplate>
+                                        </CollectionView>
+                                        <Button Grid.Row="1" 
+                                                HorizontalOptions="Center" 
+                                                VerticalOptions="Center" 
+                                                Clicked="PostComponent"
+                                                HeightRequest="40"
+                                                WidthRequest="40"
+                                                Text="+" 
+                                                TextColor="Black"  
+                                                CornerRadius="20"  
+                                                BorderWidth="1" 
+                                                BackgroundColor="GhostWhite" />
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </ScrollView>
+            </Border>
+        </Grid>
+        <Grid Grid.Column="1" 
+              RowDefinitions="70,*" 
+              RowSpacing="10" 
+              Margin="20,0,20,20" 
+              x:Name="MenuItem2">
+            <Label Text="{Binding Id}" 
+                   IsVisible="True"/>
+            <Border BackgroundColor="White" 
+                    StrokeShape="RoundRectangle 10">
+                <Label x:Name="TitleItem"
+                       Text="{Binding Title}"
+                       HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center"
+                       FontSize="24"
+                       FontFamily="OpenSansSemibold"/>
+            </Border>
+            <Border  Grid.Row="1"
+                     BackgroundColor="White" 
+                     StrokeShape="RoundRectangle 10">
+                <Grid  BackgroundColor="White" >
+                    <Editor x:Name="DescriptionItem"
+                            Text="{Binding Description}"
+                            Margin="5"
+                            FontSize="20"
+                            FontFamily="OpenSansSemibold"
+                            IsReadOnly="True"/>
+
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</ContentPage>
