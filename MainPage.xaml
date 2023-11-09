@@ -64,7 +64,7 @@
                                                  BackgroundColor="Transparent"/>
                                     </HorizontalStackLayout>
 
-                                    <Grid  Grid.Row="1" 
+                                  <Grid  Grid.Row="1" 
                                            RowDefinitions="Auto,50"
                                            RowSpacing="0"
                                            Margin="0"
@@ -86,7 +86,7 @@
                                                             <Button Grid.Column="0" 
                                                                     HorizontalOptions="Center" 
                                                                     VerticalOptions="Center"
-                                                                    Clicked="UpdateComponent"
+                                                                    Clicked="PutComponent"
                                                                     Text="🔁" 
                                                                     TextColor="Black"  
                                                                     BorderWidth="0" 

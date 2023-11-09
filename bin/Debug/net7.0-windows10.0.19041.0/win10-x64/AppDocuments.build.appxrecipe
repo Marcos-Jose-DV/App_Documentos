@@ -34,9 +34,6 @@
     <AppxPackagedFile Include="D:\Projetos GitHub\C#\desktop\AppDocuments\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppDocuments.dll">
       <PackagePath>AppDocuments.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projetos GitHub\C#\desktop\HerpersFile\bin\Debug\net7.0-windows10.0.19041.0\HerpersFile.dll">
-      <PackagePath>HerpersFile.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projetos GitHub\C#\desktop\AppDocuments\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>AppDocuments.exe</PackagePath>
     </AppxPackagedFile>

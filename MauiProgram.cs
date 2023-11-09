@@ -1,4 +1,5 @@
 ﻿using AppDocuments.Data;
+using AppDocuments.Helpers;
 using AppDocuments.ViewModels;
 using AppDocuments.Views;
 using LiteDB;
@@ -25,6 +26,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<PostCategoryPage>();
         builder.Services.AddSingleton<PostComponentPage>();
         builder.Services.AddSingleton<LiteDatabase>();
+        builder.Services.AddSingleton<ConvertObject>();
 
         builder.Services.AddSingleton<ICategoryRepository, CategoryRepository>();
         builder.Services.AddSingleton<IComponentRepositoty, ComponentRepositoty>();

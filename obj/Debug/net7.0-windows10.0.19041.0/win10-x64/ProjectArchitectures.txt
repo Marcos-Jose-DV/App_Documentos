@@ -1,2 +1,1 @@
 D:\Projetos GitHub\C#\desktop\AppDocuments\AppDocuments.csproj;x64
-D:\Projetos GitHub\C#\desktop\HerpersFile\HerpersFile.csproj;neutral

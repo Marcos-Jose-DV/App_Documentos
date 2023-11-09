@@ -10,7 +10,6 @@
       "AppDocuments/1.0": {
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
-          "HerpersFile": "1.0.0",
           "LiteDB": "5.0.17",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
@@ -1013,11 +1012,6 @@
             "fileVersion": "0.0.0.0"
           }
         }
-      },
-      "HerpersFile/1.0.0": {
-        "runtime": {
-          "HerpersFile.dll": {}
-        }
       }
     }
   },
@@ -1163,11 +1157,6 @@
       "sha512": "sha512-1Y8KDCmUqytdduubaQhRz6aqaP7YhVSPE/fHeqLMsK3DrV+eBThrqkM6R/8N2lu0mwkNfKSTSAhixrTR72nyWA==",
       "path": "microsoft.windowsappsdk/1.2.221209.1",
       "hashPath": "microsoft.windowsappsdk.1.2.221209.1.nupkg.sha512"
-    },
-    "HerpersFile/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   },
   "runtimes": {
