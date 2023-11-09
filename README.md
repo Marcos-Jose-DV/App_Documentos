@@ -30,6 +30,9 @@ Este projeto é um exemplo de um aplicativo de gerenciamento de dicas de program
 
 - Ao clicar em um componente, os detalhes, incluindo título e descrição, são exibidos na área de detalhes.
 
+
+### Rede Sociais
+- Linkedin: [Marcos José]([https://github.com/Marcos-Jose-DV](https://www.linkedin.com/in/marcosjose-/))
 - GitHub: [Marcos José](https://github.com/Marcos-Jose-DV)
 
 ### Algumas dicas relacionadas ao projetos estão na documentação do Microsoft.
