@@ -69,10 +69,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\HerpersFile\HerpersFile.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <Folder Include="Services\" />
 	</ItemGroup>
 

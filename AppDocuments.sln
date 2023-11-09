@@ -5,8 +5,6 @@ VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDocuments", "AppDocuments.csproj", "{41081935-0F3C-431D-8D51-9E7C25855500}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HerpersFile", "..\HerpersFile\HerpersFile.csproj", "{5BC28499-BE0A-4371-B429-64991195BD81}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,10 +17,6 @@ Global
 		{41081935-0F3C-431D-8D51-9E7C25855500}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41081935-0F3C-431D-8D51-9E7C25855500}.Release|Any CPU.Build.0 = Release|Any CPU
 		{41081935-0F3C-431D-8D51-9E7C25855500}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{5BC28499-BE0A-4371-B429-64991195BD81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5BC28499-BE0A-4371-B429-64991195BD81}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5BC28499-BE0A-4371-B429-64991195BD81}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5BC28499-BE0A-4371-B429-64991195BD81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

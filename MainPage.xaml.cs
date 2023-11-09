@@ -168,6 +168,15 @@ public partial class MainPage : ContentPage
         TitleItem.Text = _component.Title;
         DescriptionItem.Text = _component.Description;
     }
+
+    /// <summary>
+    /// Metodo que remove um componente selecionada
+    /// chamando metodo que vai atualizar o
+    /// _component, depois chamo o repositorio para deletar a component
+    /// </summary>
+    /// /// <param name="WeakReferenceMessenger">Class que comunica ao LiteDB que uma nova alteração foi feita</param>
+    /// <param name="sender">Objeto com dados da seleção</param>
+    /// <param name="e">Captura eventos da seleção</param>
     private async void DeleteComponent(object sender, EventArgs e)
     {
         bool result = await DisplayAlert("Apagar", "Deseja apagar essa SubCategoria? (Todos os dados serão pedidos)", "Ok", "Cancelar");
