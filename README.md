@@ -7,7 +7,7 @@
 # App gerenciamento de dicas de programação
 
 Resolvir criar esse app para uso pessoal para salvar textos com dicas de programação, Algo que precisava,
-Então eu mesmo fiz, Escolho usar o NET Maui por ter um pouco de conhecimento no C#.
+Então eu mesmo fiz, Escolhi o NET Maui por ter um pouco de conhecimento no C#.
 
 Framework que usei para criar esse app foi Net Maui, O .NET MAUI (Multi-platform App UI) é um framework de código aberto da Microsoft que permite o desenvolvimento de aplicativos multiplataforma para dispositivos móveis, desktop e web, usando uma única base de código em C#. Ele é uma evolução do Xamarin.Forms e foi projetado para simplificar ainda mais o desenvolvimento de aplicativos multiplataforma.
 
